@@ -1,9 +1,9 @@
 class Pipe{
     constructor(height, width){
       this.width = 45;
-      this.topPipe = (Math.random() * height/3 + (height/5)) ;
+      this.topPipe = (Math.random() * height/3 + 60) ;
       this.bottomPipe = Math.random(height/2);
-      this.speed = 5;
+      this.speed = 2;
       this.start = width;
     }
     
@@ -13,7 +13,7 @@ class Pipe{
     }
 
     update(){
-        this.speed += 5;
+        this.start -= this.speed;
     }
 
 }
